@@ -11,13 +11,15 @@
 <body>
     <div class="flex-container">
         <div class="title"><h1>SketchPad</h1></div>
+        <div class="mode">Mode : Coloring</div>
             <div class="content">
                 <div class="board"> </div>
                 <div class="buttons">
-                    <button>Black</button>
-                    <button>White</button>
-                    <button>Random</button>
-                    <button>Reset</button>
+                    <button onclick="colorChoice('black')">Black</button>
+                    <button onclick="colorChoice('white')">Erasor</button>
+                    <button onclick="colorChoice('gray')">Gray</button>
+                    <button onclick="colorChoice('random')">Random</button>
+                    <button onclick="resetBoard()">Reset</button>
                 </div>
                 <div>
                     <input type="text" placeholder="Size of Board" 
