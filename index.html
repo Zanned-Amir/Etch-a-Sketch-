@@ -11,21 +11,24 @@
 <body>
     <div class="flex-container">
         <div class="title"><h1>SketchPad</h1></div>
-        <div class="mode">Mode : Coloring</div>
+        <div class="mode">Mode : <span style="color : green">Coloring</span> </div>
             <div class="content">
                 <div class="board"> </div>
                 <div class="buttons">
-                    <button onclick="colorChoice('black')">Black</button>
-                    <button onclick="colorChoice('white')">Erasor</button>
-                    <button onclick="colorChoice('gray')">Gray</button>
-                    <button onclick="colorChoice('random')">Random</button>
-                    <button onclick="resetBoard()">Reset</button>
+                    <button class="btnblack" onclick="colorChoice('black')">Black</button>
+                    <button class="btnwhite" onclick="colorChoice('white')">Erasor</button>
+                    <button class="btnbgray" onclick="colorChoice('gray')">Gray</button>
+                    <button class="btnrandom" onclick="colorChoice('random')">Random</button>
+                    <button class="btnreset" onclick="resetBoard()">Reset</button>
                 </div>
                 <div>
                     <input type="text" placeholder="Size of Board" 
                     value="16"
                     onchange="changeSize(this.value)"/>
                     <button>Set Size</button>
+                    <div class="error" style="display: none;">
+                        Input must be between 2 and 100
+                    </div>
                 </div>
             </div>
         </div>
